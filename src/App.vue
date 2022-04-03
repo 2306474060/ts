@@ -1,53 +1,37 @@
 <template>
   <div id="app">
 
-  <el-row class="mb-4">
-    <el-button>Default</el-button>
-    <el-button type="primary">Primary</el-button>
-    <el-button type="success">Success</el-button>
-    <el-button type="info">Info</el-button>
-    <el-button type="warning">Warning</el-button>
-    <el-button type="danger">Danger</el-button>
-    <el-button>中文</el-button>
-  </el-row>
-
-  <el-row class="mb-4">
-    <el-button plain>Plain</el-button>
-    <el-button type="primary" plain>Primary</el-button>
-    <el-button type="success" plain>Success</el-button>
-    <el-button type="info" plain>Info</el-button>
-    <el-button type="warning" plain>Warning</el-button>
-    <el-button type="danger" plain>Danger</el-button>
-  </el-row>
-
-  <el-row class="mb-4">
-    <el-button round>Round</el-button>
-    <el-button type="primary" round>Primary</el-button>
-    <el-button type="success" round>Success</el-button>
-    <el-button type="info" round>Info</el-button>
-    <el-button type="warning" round>Warning</el-button>
-    <el-button type="danger" round>Danger</el-button>
-  </el-row>
-
-  <el-row>
-    <el-button :icon="Search" circle />
-    <el-button type="primary" :icon="Edit" circle />
-    <el-button type="success" :icon="Check" circle />
-    <el-button type="info" :icon="Message" circle />
-    <el-button type="warning" :icon="Star" circle />
-    <el-button type="danger" :icon="Delete" circle />
-  </el-row>
+    <top-menu />
+    <left-menu-bar></left-menu-bar>
+    <roll-images></roll-images>
 
   </div>
 </template>
 
 <script lang="ts" setup>
+
 import {
-  Check,
-  Delete,
-  Edit,
-  Message,
-  Search,
-  Star,
+  Document,
+  Menu as IconMenu,
+  Location,
+  Setting,
 } from '@element-plus/icons-vue'
+import TopMenu from "@/views/topMenu.vue";
+import RollImages from "@/views/rollImages.vue";
+import LeftMenuBar from "@/views/leftMenuBar.vue";
+const handleOpen = (key: string, keyPath: string[]) => {
+  console.log(key, keyPath)
+}
+const handleClose = (key: string, keyPath: string[]) => {
+  console.log(key, keyPath)
+}
 </script>
+
+<style scoped>
+html{height:100%;width: 100%}
+.tac{
+  width: 450px;
+  height: 100%;
+}
+
+</style>

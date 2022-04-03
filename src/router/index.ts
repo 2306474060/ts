@@ -1,11 +1,27 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-
+import App from '../App.vue'
+import DEMO from '../views/DEMO.vue'
+import topMenu from '../views/topMenu.vue'
+import leftMenuBar from '../views/leftMenuBar.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'App',
+    component: App
+  },
+  {
+    path: '/DEMO',
+    name: 'DEMO',
+    component: DEMO
+  },{
+    path: '/leftMenuBar',
+    name: 'leftMenuBar',
+    component: leftMenuBar
+  },
+  {
+    path: '/topMenu',
+    name: 'topMenu',
+    component: topMenu
   },
   {
     path: '/about',
