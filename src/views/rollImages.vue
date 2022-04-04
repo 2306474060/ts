@@ -1,15 +1,33 @@
 
 <template>
-  <div class="block">
-    <el-carousel height="150px">
-      <el-carousel-item v-for="item in 4" :key="item">
-        <h3 class="small">{{ item }}</h3>
+  <div class="block" >
+    <el-carousel height="350px">
+      <el-carousel-item v-for="item in carouseData" :key="item">
+        <img :src="item.url" style="width: 100%;height: 350px;float: right">
       </el-carousel-item>
     </el-carousel>
   </div>
 
 </template>
 
+<script>
+export default {
+  name: "rollImages",
+  components: {},
+  data() {
+    return {
+      //定义跑马灯的图片路径
+      carouseData: [
+        { url: require("../assets/background.png") },
+        { url: require("../assets/cover.png") },
+        { url: require("../assets/background.png") },
+        { url: require("../assets/cover.png") }
+      ],
+    };
+  },
+};
+
+</script>
 <style scoped>
 .el-carousel__item h3 {
   float: right;
@@ -32,5 +50,7 @@
 }
 .block{
   height: 300px;
+  width: 85%;
+  float: right;
 }
 </style>

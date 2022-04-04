@@ -41,7 +41,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
 <style >
 .el-menu-demo{
-   float: right;
+   float: left;
    width: 100%;
 }
 #right{
